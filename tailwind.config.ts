@@ -6,24 +6,24 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#0C1F26",
-          deep: "#081619",
-          soft: "#143038",
-          line: "#22424A",
+          DEFAULT: "#161B2E",
+          deep: "#0B0E1B",
+          soft: "#242B47",
+          line: "#3C4569",
         },
         paper: {
-          DEFAULT: "#F4F6F5",
+          DEFAULT: "#F7F4EE",
           raised: "#FFFFFF",
-          sunk: "#E9EDEB",
+          sunk: "#ECE7DA",
         },
         accent: {
-          DEFAULT: "#0E8A6A",
-          deep: "#0A6E55",
-          soft: "#D9EFE7",
-          bright: "#3FBF97",
+          DEFAULT: "#B85C2E",
+          deep: "#8F4620",
+          soft: "#F2DFC7",
+          bright: "#DE8C4E",
         },
-        rule: "#DCE2E0",
-        muted: "#5C6B6F",
+        rule: "#E4DECE",
+        muted: "#6B6559",
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
