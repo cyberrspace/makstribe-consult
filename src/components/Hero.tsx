@@ -25,11 +25,11 @@ export default function Hero() {
       {/* ambient field */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px] bg-[radial-gradient(60%_60%_at_78%_18%,rgba(14,138,106,0.10),transparent_65%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px] bg-[radial-gradient(60%_60%_at_78%_18%,rgba(194,99,46,0.12),transparent_65%)]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] [background-image:radial-gradient(#161B2E_0.7px,transparent_0.7px)] [background-size:26px_26px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.16),transparent_70%)]"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] [background-image:radial-gradient(rgb(var(--ink))_0.7px,transparent_0.7px)] [background-size:26px_26px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.16),transparent_70%)]"
       />
 
       <div className="shell">

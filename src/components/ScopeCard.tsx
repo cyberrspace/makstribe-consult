@@ -19,7 +19,7 @@ export default function ScopeCard() {
       initial={reduce ? { opacity: 0 } : { opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="relative overflow-hidden rounded-3xl bg-ink p-8 shadow-[0_40px_80px_-40px_rgba(12,31,38,0.55)] sm:p-10"
+      className="relative overflow-hidden rounded-3xl bg-night p-8 shadow-[0_40px_80px_-40px_rgba(22,27,46,0.55)] sm:p-10"
     >
       {/* ambient glow */}
       <div

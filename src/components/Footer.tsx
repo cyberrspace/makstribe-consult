@@ -9,7 +9,7 @@ const company = [
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-accent bg-ink-deep text-white">
+    <footer className="border-t-2 border-accent bg-night-deep text-white">
       <div className="shell py-16 sm:py-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div>

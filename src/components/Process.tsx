@@ -44,9 +44,13 @@ export default function Process() {
               >
                 <span className="absolute left-0 top-0 h-px w-0 bg-accent transition-all duration-700 ease-expo group-hover:w-full" />
 
-                <div className="font-display text-[44px] font-semibold leading-none tracking-[-0.04em] text-accent">
+                <motion.div
+                  className="font-display text-[44px] font-semibold leading-none tracking-[-0.04em] text-accent transition-colors duration-300 group-hover:text-accent-deep"
+                  whileHover={{ y: -4 }}
+                  transition={{ type: "spring", stiffness: 320, damping: 20 }}
+                >
                   {step.number}
-                </div>
+                </motion.div>
 
                 <h3 className="mt-5 font-display text-[19px] font-semibold tracking-[-0.02em]">
                   {step.title}

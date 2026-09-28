@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { nav } from "@/lib/site";
 import Wordmark from "./ui/Wordmark";
+import ThemeToggle from "./ui/ThemeToggle";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,7 @@ export default function Header() {
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-expo ${
           scrolled
-            ? "border-b border-rule bg-white/80 backdrop-blur-xl"
+            ? "border-b border-rule bg-paper-raised/80 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent"
         }`}
       >
@@ -54,9 +55,11 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <ThemeToggle />
+
             <a
               href="#contact"
-              className="group hidden items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition-all duration-300 ease-expo hover:bg-ink-soft hover:shadow-[0_12px_28px_-12px_rgba(12,31,38,0.6)] sm:inline-flex"
+              className="group hidden items-center gap-2 rounded-full bg-night px-6 py-3 text-sm font-medium text-white transition-all duration-300 ease-expo hover:bg-night-soft hover:shadow-[0_12px_28px_-12px_rgba(22,27,46,0.6)] sm:inline-flex"
             >
               Start a project
               <span
@@ -89,18 +92,21 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[70] bg-ink text-white md:hidden"
+            className="fixed inset-0 z-[70] bg-night text-white md:hidden"
           >
             <div className="shell flex h-[74px] items-center justify-between">
               <Wordmark tone="dark" />
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-xl"
-              >
-                &times;
-              </button>
+              <div className="flex items-center gap-3">
+                <ThemeToggle tone="dark" />
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close menu"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-xl"
+                >
+                  &times;
+                </button>
+              </div>
             </div>
 
             <nav className="shell mt-10 flex flex-col">

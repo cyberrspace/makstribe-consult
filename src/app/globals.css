@@ -2,14 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light;
+  --ink: 23 28 48;
+  --paper: 248 245 239;
+  --paper-raised: 255 255 255;
+  --paper-sunk: 237 232 218;
+  --accent-deep: 150 71 30;
+  --accent-soft: 244 225 201;
+  --rule: 230 224 208;
+  --muted: 108 102 89;
+}
+
+.dark {
+  color-scheme: dark;
+  --ink: 237 235 227;
+  --paper: 13 15 22;
+  --paper-raised: 23 27 41;
+  --paper-sunk: 6 7 11;
+  --accent-deep: 227 146 79;
+  --accent-soft: 54 38 26;
+  --rule: 40 45 64;
+  --muted: 158 152 140;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    transition: background-color 0.35s ease;
   }
 
   body {
     @apply bg-paper text-ink font-sans antialiased;
+    transition: background-color 0.35s ease, color 0.35s ease;
   }
 
   ::selection {

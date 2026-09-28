@@ -9,11 +9,11 @@ const base =
 
 const variants: Record<Variant, string> = {
   solid:
-    "bg-ink text-white hover:bg-ink-soft hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(12,31,38,0.55)]",
+    "bg-night text-white hover:bg-night-soft hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(22,27,46,0.55)]",
   outline:
     "border border-ink/20 text-ink hover:border-ink/60 hover:-translate-y-0.5 hover:bg-ink/[0.03]",
   accent:
-    "bg-accent text-white hover:bg-accent-deep hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(14,138,106,0.7)]",
+    "bg-accent text-white hover:bg-accent-deep hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(194,99,46,0.7)]",
   "ghost-dark":
     "border border-white/25 text-white hover:border-white/70 hover:-translate-y-0.5 hover:bg-white/5",
 };

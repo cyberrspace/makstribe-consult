@@ -1,29 +1,33 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
         ink: {
+          DEFAULT: "rgb(var(--ink) / <alpha-value>)",
+        },
+        paper: {
+          DEFAULT: "rgb(var(--paper) / <alpha-value>)",
+          raised: "rgb(var(--paper-raised) / <alpha-value>)",
+          sunk: "rgb(var(--paper-sunk) / <alpha-value>)",
+        },
+        accent: {
+          DEFAULT: "#C2632E",
+          deep: "rgb(var(--accent-deep) / <alpha-value>)",
+          soft: "rgb(var(--accent-soft) / <alpha-value>)",
+          bright: "#E3924F",
+        },
+        night: {
           DEFAULT: "#161B2E",
           deep: "#0B0E1B",
           soft: "#242B47",
           line: "#3C4569",
         },
-        paper: {
-          DEFAULT: "#F7F4EE",
-          raised: "#FFFFFF",
-          sunk: "#ECE7DA",
-        },
-        accent: {
-          DEFAULT: "#B85C2E",
-          deep: "#8F4620",
-          soft: "#F2DFC7",
-          bright: "#DE8C4E",
-        },
-        rule: "#E4DECE",
-        muted: "#6B6559",
+        rule: "rgb(var(--rule) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],

@@ -125,7 +125,7 @@ export default function Contact() {
           </div>
 
           <Reveal delay={0.12}>
-            <div className="rounded-3xl border border-rule bg-paper-raised p-7 shadow-[0_30px_70px_-50px_rgba(12,31,38,0.5)] sm:p-9">
+            <div className="rounded-3xl border border-rule bg-paper-raised p-7 shadow-[0_30px_70px_-50px_rgba(22,27,46,0.5)] sm:p-9">
               <AnimatePresence mode="wait">
                 {status === "sent" ? (
                   <motion.div

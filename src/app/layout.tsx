@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import { site } from "@/lib/site";
 import "./globals.css";
+
+const themeInitScript = `(function(){try{var stored=localStorage.getItem("theme");var prefersDark=window.matchMedia("(prefers-color-scheme: dark)").matches;if(stored==="dark"||(!stored&&prefersDark)){document.documentElement.classList.add("dark")}}catch(e){}})();`;
 
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -65,7 +68,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#161B2E",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F8F5EF" },
+    { media: "(prefers-color-scheme: dark)", color: "#0D0F16" },
+  ],
 };
 
 const jsonLd = {
@@ -91,12 +97,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-5 focus:py-2 focus:text-sm focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-night focus:px-5 focus:py-2 focus:text-sm focus:text-white"
         >
           Skip to content
         </a>
